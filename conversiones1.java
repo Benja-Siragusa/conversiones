@@ -3,153 +3,157 @@ import java.io.*;
 public class conversiones1 {
     public static void main(String[] ar) throws IOException {
         BufferedReader e = new BufferedReader(new InputStreamReader(System.in));
-        int accion, base1, base2, numero1, operacion, numero2;
+        int a, accion, base1, base2, numero1, operacion, numero2;
         String cadena1, cadena2;
-        System.out.println("ingrese que desea hacer\n1 conversion\n2 operacion");
-        accion = Integer.parseInt(e.readLine());
-        if (accion == 1) {
-            System.out.println("digame en que base es su numero, 2, 8, 10 o 16:");
-            base1 = Integer.parseInt(e.readLine());
-            switch (base1) {
-                case 2:
-                    System.out.println("digame su numero binario:");
-                    cadena1 = (e.readLine());
-                    System.out.println("digame a que base desea convertir su numero binario 8, 10 o 16:");
-                    base2 = Integer.parseInt(e.readLine());
-                    switch (base2) {
-                        case 8:
-                            System.out.println("su numero en octal es: " + b2b8(cadena1));
-                            break;
-                        case 10:
-                            System.out.println("su numero en decimal es: " + b2b10(cadena1));
-                            break;
-                        case 16:
-                            System.out.println("su numero en hexadecimal es: " + b2b16(cadena1));
-                            break;
-                        default:
-                            System.out.println("un binario solo se puede pasar a base 8, 10 o 16.");
-                            break;
-                    }
-                    break;
-                case 8:
-                    System.out.println("digame su numero octal:");
-                    cadena1 = (e.readLine());
-                    System.out.println("digame a que base desea convertir su numero octal 2, 10 o 16:");
-                    base2 = Integer.parseInt(e.readLine());
-                    switch (base2) {
-                        case 2:
-                            System.out.println("su numero en binario es: " + b8b2(cadena1));
-                            break;
-                        case 10:
-                            System.out.println("su numero en decimal es: " + b8b10(cadena1));
-                            break;
-                        case 16:
-                            System.out.println("su numero en hexadecimal es: " + b8b16(cadena1));
-                            break;
-                        default:
-                            System.out.println("un octal solo se puede pasar a base 2, 10 o 16.");
-                            break;
-                    }
-                    break;
-                case 10:
-                    System.out.println("digame su numero decimal:");
-                    numero1 = Integer.parseInt(e.readLine());
-                    System.out.println("digame a que base desea convertir su numero decimal 2, 8 o 16:");
-                    base2 = Integer.parseInt(e.readLine());
-                    switch (base2) {
-                        case 2:
-                            System.out.println("su numero en binario es " + b10b2(numero1));
-                            break;
-                        case 8:
-                            System.out.println("su numero en octal es " + b10b8(numero1));
-                            break;
-                        case 16:
-                            System.out.println("su numero en hexadecimal es " + b10b16(numero1));
-                            break;
-                        default:
-                            System.out.println("un decimal solo se puede pasar a base 2, 8 o 16.");
-                            break;
-                    }
-                    break;
-                case 16:
-                    System.out.println("digame su numero hexadecimal:");
-                    cadena1 = (e.readLine());
-                    System.out.println("digame a que base desea convertir su numero hexadecimal 2, 8 o 10:");
-                    base2 = Integer.parseInt(e.readLine());
-                    switch (base2) {
-                        case 2:
-                            System.out.println("su numero binario es: " + b16b2(cadena1));
-                            break;
-                        case 8:
-                            System.out.println("su numero octal es: " + b16b8(cadena1));
-                            break;
-                        case 10:
-                            System.out.println("su numero decimal es: " + b16b10(cadena1));
-                            break;
-                        default:
-                            System.out.println("un sexadecimal solo se puede pasar a base 2, 8 o 10.");
-                            break;
-                    }
-                    break;
-                default:
-                    System.out.println("base invalida.");
-                    break;
+        do {
+            System.out.println("ingrese que desea hacer\n1 conversion\n2 operacion");
+            accion = Integer.parseInt(e.readLine());
+            if (accion == 1) {
+                System.out.println("digame en que base es su numero, 2, 8, 10 o 16:");
+                base1 = Integer.parseInt(e.readLine());
+                switch (base1) {
+                    case 2:
+                        System.out.println("digame su numero binario:");
+                        cadena1 = (e.readLine());
+                        System.out.println("digame a que base desea convertir su numero binario 8, 10 o 16:");
+                        base2 = Integer.parseInt(e.readLine());
+                        switch (base2) {
+                            case 8:
+                                System.out.println("su numero en octal es: " + b2b8(cadena1));
+                                break;
+                            case 10:
+                                System.out.println("su numero en decimal es: " + b2b10(cadena1));
+                                break;
+                            case 16:
+                                System.out.println("su numero en hexadecimal es: " + b2b16(cadena1));
+                                break;
+                            default:
+                                System.out.println("un binario solo se puede pasar a base 8, 10 o 16.");
+                                break;
+                        }
+                        break;
+                    case 8:
+                        System.out.println("digame su numero octal:");
+                        cadena1 = (e.readLine());
+                        System.out.println("digame a que base desea convertir su numero octal 2, 10 o 16:");
+                        base2 = Integer.parseInt(e.readLine());
+                        switch (base2) {
+                            case 2:
+                                System.out.println("su numero en binario es: " + b8b2(cadena1));
+                                break;
+                            case 10:
+                                System.out.println("su numero en decimal es: " + b8b10(cadena1));
+                                break;
+                            case 16:
+                                System.out.println("su numero en hexadecimal es: " + b8b16(cadena1));
+                                break;
+                            default:
+                                System.out.println("un octal solo se puede pasar a base 2, 10 o 16.");
+                                break;
+                        }
+                        break;
+                    case 10:
+                        System.out.println("digame su numero decimal:");
+                        numero1 = Integer.parseInt(e.readLine());
+                        System.out.println("digame a que base desea convertir su numero decimal 2, 8 o 16:");
+                        base2 = Integer.parseInt(e.readLine());
+                        switch (base2) {
+                            case 2:
+                                System.out.println("su numero en binario es " + b10b2(numero1));
+                                break;
+                            case 8:
+                                System.out.println("su numero en octal es " + b10b8(numero1));
+                                break;
+                            case 16:
+                                System.out.println("su numero en hexadecimal es " + b10b16(numero1));
+                                break;
+                            default:
+                                System.out.println("un decimal solo se puede pasar a base 2, 8 o 16.");
+                                break;
+                        }
+                        break;
+                    case 16:
+                        System.out.println("digame su numero hexadecimal:");
+                        cadena1 = (e.readLine());
+                        System.out.println("digame a que base desea convertir su numero hexadecimal 2, 8 o 10:");
+                        base2 = Integer.parseInt(e.readLine());
+                        switch (base2) {
+                            case 2:
+                                System.out.println("su numero binario es: " + b16b2(cadena1));
+                                break;
+                            case 8:
+                                System.out.println("su numero octal es: " + b16b8(cadena1));
+                                break;
+                            case 10:
+                                System.out.println("su numero decimal es: " + b16b10(cadena1));
+                                break;
+                            default:
+                                System.out.println("un sexadecimal solo se puede pasar a base 2, 8 o 10.");
+                                break;
+                        }
+                        break;
+                    default:
+                        System.out.println("base invalida.");
+                        break;
+                }
+            } else if (accion == 2) {
+                System.out.println("que desea hacer:\n1 suma\n2 resta");
+                operacion = Integer.parseInt(e.readLine());
+                System.out.println("digame en que base es su numero 2, 8, 10 o 16:");
+                base1 = Integer.parseInt(e.readLine());
+                System.out.println("digame el primer numero: ");
+                cadena1 = (e.readLine());
+                System.out.println("digame el segundo numero: ");
+                cadena2 = (e.readLine());
+                switch (operacion) {
+                    case 1:
+                        switch (base1) {
+                            case 2:
+                                suma2(cadena1, cadena2);
+                                break;
+                            case 8:
+                                suma8(cadena1, cadena2);
+                                break;
+                            case 10:
+                                numero1 = Integer.valueOf(cadena1);
+                                numero2 = Integer.valueOf(cadena2);
+                                System.out.println(suma10(numero1, numero2));
+                                break;
+                            case 16:
+                                suma16(cadena1, cadena2);
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (base1) {
+                            case 2:
+                                resta2(cadena1, cadena2);
+                                break;
+                            case 8:
+                                resta8(cadena1, cadena2);
+                                break;
+                            case 10:
+                                numero1 = Integer.valueOf(cadena1);
+                                numero2 = Integer.valueOf(cadena2);
+                                System.out.println(resta10(numero1, numero2));
+                                break;
+                            case 16:
+                                resta16(cadena1, cadena2);
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    default:
+                        System.out.println("solo se pueden hacer sumas o restas.");
+                        break;
+                }
             }
-        } else if (accion == 2) {
-            System.out.println("que desea hacer:\n1 suma\n2 resta");
-            operacion = Integer.parseInt(e.readLine());
-            System.out.println("digame en que base es su numero 2, 8, 10 o 16:");
-            base1 = Integer.parseInt(e.readLine());
-            System.out.println("digame el primer numero: ");
-            cadena1 = (e.readLine());
-            System.out.println("digame el segundo numero: ");
-            cadena2 = (e.readLine());
-            switch (operacion) {
-                case 1:
-                    switch (base1) {
-                        case 2:
-                            suma2(cadena1, cadena2);
-                            break;
-                        case 8:
-                            suma8(cadena1, cadena2);
-                            break;
-                        case 10:
-                            numero1 = Integer.valueOf(cadena1);
-                            numero2 = Integer.valueOf(cadena2);
-                            System.out.println(suma10(numero1, numero2));
-                            break;
-                        case 16:
-                            suma16(cadena1, cadena2);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 2:
-                    switch (base1) {
-                        case 2:
-                            resta2(cadena1, cadena2);
-                            break;
-                        case 8:
-                            resta8(cadena1, cadena2);
-                            break;
-                        case 10:
-                            numero1 = Integer.valueOf(cadena1);
-                            numero2 = Integer.valueOf(cadena2);
-                            System.out.println(resta10(numero1, numero2));
-                            break;
-                        case 16:
-                            resta16(cadena1, cadena2);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                default:
-                    System.out.println("solo se pueden hacer sumas o restas.");
-                    break;
-            }
-        }
+            System.out.println("si desea realizar otra operacion inserte cualquier numero, de lo contrario inserte -1");
+            a = Integer.parseInt(e.readLine());
+        } while (a != -1);
     }
 
     // convertir de binario a otras bases:
@@ -218,7 +222,7 @@ public class conversiones1 {
 
     static String b16b8(String a) {
         int decimal = Integer.parseInt(a, 16);
-        String octal = Integer.toBinaryString(decimal);
+        String octal = Integer.toOctalString(decimal);
         return octal;
     }
 
