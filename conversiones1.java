@@ -11,7 +11,7 @@ public class conversiones1 {
             System.out.print("digame en que base es su numero 2, 8, 10 o 16: ");
             base = Integer.parseInt(e.readLine());
             if (accion == 1) {
-                System.out.print("digame a que base desea convertir su numero binario 8, 10 o 16: ");
+                System.out.print("digame a que base desea convertir su numero 8, 10 o 16: ");
                 newBase = Integer.parseInt(e.readLine());
                 switch (base) {
                     case 2:
@@ -226,16 +226,14 @@ public class conversiones1 {
     static void suma2(String a, String b) {
         int n1 = Integer.parseInt(a, 2);
         int n2 = Integer.parseInt(b, 2);
-        int c = n1 + n2;
-        String binary = Integer.toBinaryString(c);
+        String binary = Integer.toBinaryString(n1 + n2);
         System.out.println("La suma de sus numeros binarios es: \n" + a + " + " + b + " = " + binary);
     }
 
     static void resta2(String a, String b) {
         int n1 = Integer.parseInt(a, 2);
         int n2 = Integer.parseInt(b, 2);
-        int c = n1 - n2;
-        String binary = Integer.toBinaryString(c);
+        String binary = Integer.toBinaryString(n1-n2);
         System.out.println("La resta de sus numeros binarios es: \n" + a + " - " + b + " = " + binary);
     }
 
@@ -244,16 +242,14 @@ public class conversiones1 {
     static void suma8(String a, String b) {
         int n1 = Integer.parseInt(a, 8);
         int n2 = Integer.parseInt(b, 8);
-        int c = n1 + n2;
-        String octal = Integer.toOctalString(c);
+        String octal = Integer.toOctalString(n1+n2);
         System.out.println("La resta de sus numeros octales es: \n" + a + " + " + b + " = " + octal);
     }
 
     static void resta8(String a, String b) {
         int n1 = Integer.parseInt(a, 8);
         int n2 = Integer.parseInt(b, 8);
-        int c = n1 - n2;
-        String octal = Integer.toOctalString(c);
+        String octal = Integer.toOctalString(n1-n2);
         System.out.println("La resta de sus numeros octales es: \n" + a + " - " + b + " = " + octal);
     }
 
@@ -272,16 +268,14 @@ public class conversiones1 {
     static void suma16(String a, String b) {
         int n1 = Integer.parseInt(a, 16);
         int n2 = Integer.parseInt(b, 16);
-        int c = n1 + n2;
-        String hexa = Integer.toHexString(c);
+        String hexa = Integer.toHexString(n1+n2);
         System.out.println("La suma de sus numeros hexadecimales es: \n" + a + " + " + b + " = " + hexa);
     }
 
     static void resta16(String a, String b) {
         int n1 = Integer.parseInt(a, 16);
         int n2 = Integer.parseInt(b, 16);
-        int c = n1 - n2;
-        String hexa = Integer.toHexString(c);
+        String hexa = Integer.toHexString(n1-n2);
         System.out.println("La resta de sus numeros hexadecimales es: \n" + a + " - " + b + " = " + hexa);
     }
 }
