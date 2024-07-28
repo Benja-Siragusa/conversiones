@@ -325,6 +325,6 @@ public class conversiones1 {
         int n1 = Integer.parseInt(a, 16);
         int n2 = Integer.parseInt(b, 16);
         String hexa = Integer.toHexString(n1-n2);
-        System.out.println("The subtraction of the hexadecimal numbers is:: \n" + a + " - " + b + " = " + hexa);
+        System.out.println("The subtraction of the hexadecimal numbers is: \n" + a + " - " + b + " = " + hexa);
     }
 }
